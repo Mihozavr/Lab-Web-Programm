@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Техническая поддержка</title>
+    <script src="technical_support_script.js"></script>
+    <style>
+            #start {
+                visibility: hidden;
+            }
+            #end {
+                visibility: hidden;
+            }
+           </style>
+</head>
+
+<body>
+
+    <form action="/start" method="GET">
+        <input type="submit" text="Начать прокат" />
+    </form>
+    <form action="/end" method="GET">
+        <input type="submit" text="Закончить прокат" />
+    </form>
+
+    <button id="start" onclick="StartRental();"> Начать прокат </button> <br>
+    <button id="end" onclick="EndRental();"> Закончить прокат </button>
+
+
+    <div id="costholder">
+            <ul id="final-cost"></ul>
+        </div>
+</body>
+
+</html>

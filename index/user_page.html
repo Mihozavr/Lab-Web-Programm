@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Прокат велосипедов</title>
+    <script src="users_requests_list_script.js"></script>
+    <style>
+        div {
+         width: 30%;
+         display: inline-block;
+        }
+        #request-form {
+            visibility: hidden;
+        }
+       </style>
+</head>
+
+<body>
+
+        <div>
+            <h4>Stels Navigator</h4>
+            <a onclick="viewForm(100)"><img src="img/1.jpg" height="200"></a>
+            <p>Горный велосипед для начинающих с навесным оборудованием Shimano, 18 скоростей. Технические особенности: прочная стальная рама, амортизационная вилка XDS с ходом 60 мм, двойные алюминиевые обода, надежные ободные тормоза V-brake, подножка. Подходит для прогулочного катания по различным дорогам и пересеченной местности</p>
+            <p>Стоимость проката: 100 руб. в час</p>
+        </div>
+
+        <div>
+            <h4>Forward Dakota </h4>
+            <a onclick="viewForm(200)"><img src="img/2.jpg" height="200"></a>
+            <p>Горный велосипед для начинающих с навесным оборудованием FWD, 6 скоростей. Технические особенности: стальная рама Hi-Ten, жесткая вилка, двойные обода FWD Double Wall, надежные ободные тормоза Promax TX-117, подножка. Подходит для прогулочного катания по различным дорогам и пересеченной местности.</p>
+            <p>Стоимость проката: 200 руб. в час</p>
+        </div>
+
+        <div>
+            <h4>Stinger Defender</h4>
+            <a onclick="viewForm(300)"><img src="img/3.jpg" height="200"></a>
+            <p>Горный велосипед для начинающих с навесным оборудованием Shimano, 6 скоростей. Технические особенности: прочная стальная рама Hi-Ten, жесткая стальная вилка, усиленные алюминиевые обода Felgebeiter HAC11, ободные тормоза V-brake. Подходит для прогулочного катания по различным дорогам и несложной пересеченной местности.</p>
+            <p>Стоимость проката: 300 руб. в час</p>
+        </div>
+
+
+        <form action="/insert" method="POST">
+        
+                <mask>Выьерите велосипед: </mask>
+                <select id="velik">
+                    <option>Stels Navigator</option>
+                    <option>Forward Dakota</option>
+                    <option>Stinger Defender</option>
+                </select><br>
+                <mask>Выьерите пункт проката: </mask>
+                <select id="point">
+                        <option>Пункт 1</option>
+                        <option>Пункт 2</option>
+                        <option>Пункт 3</option>
+                </select><br>
+                <mask>Введите ваше имя: </mask>
+                <input type="text" id="name"><br>
+                <mask>Введите ваш телефон: </mask>
+                <input type="text" id="tel"><br>
+
+                <mask>Введите дату и время: </mask>
+                <input type="text" id="date"><br>
+
+                <input type="submit" value="Отправить" />
+                <!-- <button id="add" type="button" onclick="AddToDataBase();"> Отправить </button> -->
+        
+        </form>
+
+
+        <div id="requstholder">
+            <ul id="requsetform"></ul>
+        </div>
+
+</body>
+
+</html>

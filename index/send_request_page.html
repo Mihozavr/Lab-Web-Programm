@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Техническая поддержка</title>
+    <script src="send_request_script.js"></script>
+</head>
+
+<body>
+
+    <form action="/insert" method="post" class="contact-form">
+
+        <p>Отправить заявку в службу технической поддержки.</p>
+
+        <label>Введите ваши ФИО: </label>
+        <input name="name" type="text" id="contact-name" /><br>
+        <label>Введите ваш телефон: </label>
+        <input name="tel" type="text" id="-tel" /><br>
+        <label>Опишите вашу проблему: </label><br>
+        <textarea name="comment" id="contact-comment" rows="5" cols="45"></textarea><br>
+        <input type="submit" value="Отправить" />
+
+    </form>
+
+    <div id="table_data"></div>
+    
+</body>
+
+</html>
